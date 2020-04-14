@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Janken" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="35E-ju-Edk">
+                                <rect key="frame" x="0.0" y="44" width="414" height="678"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXc-sv-ugh">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="HXF-ld-mGg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="ジャンケンをする！">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="shuffleAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hqk-sa-4je"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="これからジャンケンをします！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iot-Xl-KIP">
+                                <rect key="frame" x="0.0" y="722" width="414" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="qrW-2e-TGN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.94901960784313721" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="35E-ju-Edk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="19K-nz-H4O"/>
+                            <constraint firstItem="Iot-Xl-KIP" firstAttribute="top" secondItem="35E-ju-Edk" secondAttribute="bottom" id="5Pw-kA-XiK"/>
+                            <constraint firstItem="DXc-sv-ugh" firstAttribute="top" secondItem="Iot-Xl-KIP" secondAttribute="bottom" id="6dZ-LH-NO1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iot-Xl-KIP" secondAttribute="trailing" id="6sB-Aq-YRT"/>
+                            <constraint firstItem="DXc-sv-ugh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7b6-1P-V5q"/>
+                            <constraint firstItem="35E-ju-Edk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I2q-k2-wPp"/>
+                            <constraint firstItem="Iot-Xl-KIP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="L8O-Vi-4IH"/>
+                            <constraint firstItem="DXc-sv-ugh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Q89-Ef-cm0"/>
+                            <constraint firstItem="DXc-sv-ugh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="SF2-ec-n5O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="35E-ju-Edk" secondAttribute="trailing" id="k7k-NA-ZDv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerImageView" destination="35E-ju-Edk" id="Zox-iE-mtC"/>
+                        <outlet property="answerLabel" destination="Iot-Xl-KIP" id="n7q-I2-OsL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+</document>
